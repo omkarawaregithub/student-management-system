@@ -1,0 +1,190 @@
+/* Custom styles for Student Management System */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar */
+.sidebar {
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--white);
+}
+
+.sidebar .logo {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+    padding: 12px 20px;
+    color: var(--secondary-color);
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main content */
+.main-content {
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Dashboard cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--white);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+}
+
+.stat-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.stat-card i {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.stat-card .stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-card .stat-title {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+}
+
+/* Tables */
+.table th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Attendance radio buttons */
+.attendance-radio {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.attendance-radio input[type="radio"] {
+    display: none;
+}
+
+.attendance-radio label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.attendance-radio input[type="radio"] + label.present {
+    background-color: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.2);
+    color: var(--success-color);
+}
+
+.attendance-radio input[type="radio"] + label.absent {
+    background-color: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    color: var(--danger-color);
+}
+
+.attendance-radio input[type="radio"]:checked + label.present {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+    color: var(--white);
+}
+
+.attendance-radio input[type="radio"]:checked + label.absent {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: var(--white);
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animated-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sidebar {
+        min-height: auto;
+    }
+    
+    .stat-card .stat-number {
+        font-size: 24px;
+    }
+    
+    .stat-card i {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 16px;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+}
