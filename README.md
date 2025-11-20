@@ -32,3 +32,13 @@ https://www.apachefriends.org/
 
 ### 2️⃣ Move the Project Folder  
 Place the project folder inside:
+
+
+### 3️⃣ Create the Database  
+1. Open **phpMyAdmin**  
+2. Create a new database (example name: `student_db`)  
+3. Import the SQL file included in the project (example: `student_db.sql`)
+
+### 4️⃣ Run the Project  
+Open your browser and type:
+
